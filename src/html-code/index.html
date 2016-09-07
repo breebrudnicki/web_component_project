@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>html-code</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="elements.html">
+  </head>
+  <body>
+    <h1>Bree's Web Components</h1>
+    <main>
+    <h3>Hello World Polymer Element</h3>
+    <hello-world prop1="Friends!" first="Bree" last="Bree"></hello-world>
+    <br>
+    <p>Above is my hello world polymer element! You pass it a property and a first and last name and it says the things!</p>
+    <h3>Extended Button Polymer Element</h3>
+    <button is="button-extend">Extended Button</button>
+    <p>This is an extended button element created with polymer.</p>
+    <h3>HTML Code Polymer Element</h3>
+    <html-code>
+      <html-tag tag="div" close>
+        <html-tag tag="h1" close nest="2" class="nest2">I'm the heading</html-tag>
+        <html-tag tag="p" close nest="1" class="nest1">I'm the paragraph. A super long paragraph that I want to be longer than 500 pixels. Is this longer than 500 pixels?</html-tag>
+      </html-tag>
+    </html-code>
+    <p>The element that shows the code actually consists of two elements: html-code and html-tag</p>
+    <html-code>
+      <html-tag tag="html-code" close>
+        <html-tag tag="html-tag" class="nest1" close>html-code only allows html-tag elements</html-tag>
+      </html-tag>
+    </html-code>
+  </main>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+
+<!--
+`html-code`
+this element accepts html-tag and makes a nice block of code to read
+
+@demo demo/index.html
+-->
+
+<dom-module id="html-code">
+  <template>
+    <style>
+      :host {
+        display: block;
+        background-color: #eee;
+        border-radius: 7px;
+        padding: 15px;
+      }
+    </style>
+    <content select="html-tag"></content>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'html-code',
+
+    });
+  </script>
+</dom-module>

@@ -1,0 +1,13 @@
+{
+  "name": "a-project",
+  "description": "This is a brief description fo your project",
+  "author": "Your Name",
+  "license": "MIT",
+  "scripts": {
+    "test": "wct --plugin sauce"
+  },
+  "devDependencies": {
+    "web-component-tester": "*",
+    "bower": "*"
+  }
+}

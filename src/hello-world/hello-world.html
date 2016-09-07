@@ -1,0 +1,84 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+
+<!--
+`hello-world`
+A Hello World Polymer Element!
+
+@demo demo/index.html
+-->
+
+<dom-module id="hello-world">
+  <template>
+    <style>
+      :host {
+        display: block;
+        background-color: #ddd;
+        padding: 5px;
+        max-width: 300px;
+        margin: auto;
+      }
+      h2, p {
+        text-align: center;
+        font-family: sans-serif;
+      }
+      span {
+        color: #ff0066;
+      }
+      :host(.animate) {
+        animation-name: example;
+        animation-duration: 4s;
+      }
+      @keyframes example {
+        from {color: black;
+        background-color: #ddd;}
+        to {color: #ff0066;
+          background-color: white;
+        box-shadow: 10px 10px 5px grey;}
+      }
+    </style>
+    <div>
+      <h2>Hello [[prop1]]</h2>
+      <p>Created by [[fullname]] with <span>polymer</span>.</p>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'hello-world',
+
+      properties: {
+        first: {
+          type: String,
+          value: ''},
+        last: {
+          type: String,
+          value: ''},
+        prop1: {
+          type: String,
+          value: 'hello-world',
+        },
+        fullname: {
+          computed: '_computeFullName(first, last)'
+        }
+      },
+      _computeFullName: function(first, last) {
+        return first + ' ' + last;
+      },
+      animate: function() {
+        this.classList.toggle('animate');
+      },
+      listeners: {
+        'tap': 'tapHandler'
+      },
+      tapHandler: function() {
+        console.log('Hello from the console!');
+      },
+      created: function() {
+        console.log("created callback");
+      }
+
+    });
+  </script>
+</dom-module>

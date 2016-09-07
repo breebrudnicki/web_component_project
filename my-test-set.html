@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="bower_components/web-component-tester/browser.js"></script>
+</head>
+<body>
+  <script>
+    WCT.loadSuites([
+      'test/hello-world/hello-world_test.html',
+      'test/html-tag/html-tag_test.html',
+      'test/hello-world/hello-world_test.html?dom=shadow',
+      'test/html-tag/html-tag_test.html?dom=shadow'
+    ]);
+  </script>
+</body>
+</html>

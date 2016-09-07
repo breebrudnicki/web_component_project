@@ -1,0 +1,50 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<!--
+`button-extend`
+extended button element
+
+@demo demo/index.html
+-->
+
+<dom-module id="button-extend">
+  <template>
+    <style>
+      :host {
+        display: block;
+        background-color: #ddd;
+        color: purple;
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+      :host(:hover) {
+        background-color: purple;
+        color: #ddd;
+      }
+      :host(:focus) {
+        border: 2px solid purple;
+      }
+    </style>
+    <content></content>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'button-extend',
+      extends: 'button',
+
+      listeners: {
+        'tap': 'clickHandler'
+      },
+      clickHandler: function() {
+        alert("Aren't extended buttons cooler than normal buttons?");
+      }
+
+    });
+  </script>
+</dom-module>

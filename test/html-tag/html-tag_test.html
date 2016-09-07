@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>html-tag test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../../web-component-tester/browser.js"></script>
+
+
+    <link rel="import" href="../../src/html-tag/html-tag.html">
+  </head>
+  <body>
+
+    <test-fixture id="basic">
+      <template>
+        <html-tag></html-tag>
+      </template>
+    </test-fixture>
+    <test-fixture id="tag">
+      <template>
+        <html-tag tag="h1"></html-tag>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('html-tag', function() {
+
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'html-tag');
+        });
+
+        test('setting tag equal to something creates an open tag', function() {
+          var element = fixture('tag');
+          assert.equal(element.tag, "h1");
+        });
+
+      });
+    </script>
+  </body>
+</html>

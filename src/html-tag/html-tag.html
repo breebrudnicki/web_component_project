@@ -1,0 +1,52 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<!--
+`html-tag`
+This will be created to be used with another element called show-html to enable people to show html that they have written
+
+@demo demo/index.html
+-->
+
+<dom-module id="html-tag">
+  <template>
+    <style>
+      :host {
+        display: block;
+        font-family: monospace;
+      }
+      span {
+        color: #cc0000;
+      }
+      .nest1 {
+        padding-left: 10px;
+      }
+      .nest2 {
+        padding-left: 20px;
+      }
+    </style>
+    <span>{{_computeNesting}}{{_computeOpenTag(tag)}}</span>
+    <content></content>
+    <span>{{_computeCloseTag(close, tag)}}</span>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'html-tag',
+      properties : {
+        tag: String,
+        close: Boolean,
+        nest: {
+          type: Number,
+        }
+      },
+      _computeOpenTag: function(tag) {
+          return "<" + tag + ">";
+      },
+      _computeCloseTag: function(close, tag) {
+        return "</" + tag + ">";
+      },
+
+    });
+  </script>
+</dom-module>

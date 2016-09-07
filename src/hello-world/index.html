@@ -1,0 +1,24 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>hello-world</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    <script>
+      window.Polymer = { dom: 'shadow' }
+    </script>
+    <link rel="import" href="hello-world.html">
+    <link rel="import" href="../button-extend/button-extend.html">
+  </head>
+  <body>
+    <h1>Bree's Polymer Web Components!</h1>
+    <hello-world prop1="World" last="Carrick"></hello-world>
+    <br>
+    <hello-world prop1="Friends!" first="Super" last="Bree"></hello-world>
+    <br>
+    <button is="button-extend">Extended Button</button><br>
+    <button>Normal BORING Button</button>
+  </body>
+</html>

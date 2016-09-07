@@ -1,0 +1,7 @@
+{
+  "name": "bree-project",
+  "short_name": "bree-project",
+  "description": "Just a little page to display what elements I&#39;ve built with polymer as I&#39;ve been learning web components",
+  "start_url": "/",
+  "display": "standalone"
+}
