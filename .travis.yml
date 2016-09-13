@@ -1,3 +1,4 @@
+
 language: node_js
 node_js: stable
 dist: trusty
@@ -15,8 +16,8 @@ before_script:
 - bower install
 - polylint
 script:
-- xvfb-run wct --skip-plugin sauce
-- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then wct --skip-plugin local; fi
+- xvfb-run wct
+- if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then wct -s 'default'; fi
 env:
   global:
   - secure: nK/FtdlqG5vg6r8Ze7MmemqG5Dw75CQNMm1EU7iTyTZydtUjinBS2MQRKEGfbKnrmATLEYTjuJgjUsXDGXPF66WP32/4OdGT3mfEH/8bzAHsrrwnsgjza0nMqLeRu+jcT8ukq4QSCcY+8VKzWG3TeXIXv6kvmqaEmF9DX/iSkH4bx6VoCwvdKxLQRow912mBiwzMDFa5Toxy7SoZG+Mj6yDoK+Csj2I9W0xIB6AYSLsy+fBEAPa7Ntc6qAYS705qB2VVVTk0939WONcI+xK6z8QebTHnj2ME6v9A9EI6TkZtJsOibmiRnPkfxSBdUsyQ+ZaBd805TLQMKGAP7rGlGUzyPW0eYcRLvSfcc92d7GbTIEACvksFFH5++Bv0bd862whj6sPU4JRuzvnHac0ceRiguEP1IZd4O2Le9Ukk6z5yojNI84O2ub7b0xe7Hq+c8OjvtuRD5FMu8XW/w7Fo6EoTTKw6+4v8wjCIm6mbIlMKKs2PmOhiMTwwbiFkDzHS8yVwqmoV8aMv2dz3KI+TKDOcU8uhvvw21/C18MXwnkJ6sNnMne5EKWHP1FyTdqJBN8h9pWIL1ZhBWJ6OH7WGvuP/wuXTlRs9CaqxNnXDLk82uUOLaylT4R3GKsBoNaqIFd8GupTgyBeXb3xH9d4z2lU8X3kxmwxf1beJG+yAuFA=

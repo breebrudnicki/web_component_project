@@ -1,7 +1,6 @@
 {
   "plugins": {
     "sauce": {
-      "disabled": true,
       "browsers": [{
           "browserName": "microsoftedge",
           "platform": "Windows 10",
@@ -15,8 +14,7 @@
           "browserName": "safari",
           "platform": "OS X 10.11",
           "version": "9"
-        }
-      ]
+        }]
     }
   }
 }
