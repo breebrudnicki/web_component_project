@@ -2,7 +2,7 @@
 
 Just a little page to display what elements I&#39;ve built with polymer as I&#39;ve been learning web components
 
-https://travis-ci.org/breecarrick/web_component_project.svg?branch=master
+[![Build Status](https://travis-ci.org/breecarrick/web_component_project.svg?branch=master)](https://travis-ci.org/breecarrick/web_component_project)
 
 ## Install the Polymer-CLI
 
