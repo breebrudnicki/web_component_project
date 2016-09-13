@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link rel="manifest" href="/manifest.json">-->
     <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-    <!--<link rel="import" href="/element.html">-->
+    <link rel="import" href="/element.html">
     <!--<link rel="import" href="elements.vulcanized.html">-->
-    <link rel="import" href="dist/elements/element.html">
+    <!--<link rel="import" href="dist/elements/element.html">-->
+    <link rel="import" href="/src/github-polymer-wc/github-polymer-wc.html">
+    <link rel="import" href="/src/cedar-alert/cedar-alert.html">
   </head>
   <body>
-    <h1>Bree's Web Components</h1>
+    <github-polymer-wc username="breecarrick"></github-polymer-wc>
     <main>
     <h3>Hello World Polymer Element</h3>
-    <hello-world prop1="Friends!" first="Bree" last="Bree"></hello-world>
+    <hello-world prop1="Friends!" first="Bree" last="Carrick"></hello-world>
     <br>
     <p>Above is my hello world polymer element! You pass it a property and a first and last name and it says the things!</p>
     <h3>Extended Button Polymer Element</h3>
@@ -42,6 +44,9 @@
       <html-tag tag="img"></html-tag>
       <html-tag tag="p" close>This html-tag has tag="p" and close. The html-tag above has tag="img" and does not have the close tag.</html-tag>
     </html-code>
+    <br>
+    <cedar-alert dismissable alert-type="info">Dismissable alert</cedar-alert>
+    <cedar-alert alert-type="warning">You can't get rid of me.</cedar-alert>
   </main>
   </body>
 </html>

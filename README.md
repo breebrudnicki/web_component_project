@@ -2,6 +2,8 @@
 
 Just a little page to display what elements I&#39;ve built with polymer as I&#39;ve been learning web components
 
+https://travis-ci.org/breecarrick/web_component_project.svg?branch=master
+
 ## Install the Polymer-CLI
 
 First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
